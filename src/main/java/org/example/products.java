@@ -30,23 +30,6 @@ public class products {
         WebElement loginButton = driver.findElement(By.xpath("//input[@name='login-button']"));
         loginButton.click();
 
-        /*WebElement first_product = driver.findElement(By.xpath("//*[@class='inventory_container']/div/div[1]"));
-        String product_name = first_product.getText();
-
-        boolean check_result = false;
-
-        if (product_name.contains("Sauce Labs Backpack")) {
-            System.out.println("Expected product: Sauce Labs Backpack");
-            System.out.println("Product Result: " + product_name);
-            check_result = true;
-        } else {
-            System.out.println("Product name different than expected");
-            System.out.println("Expected: Sauce Labs Backpack");
-            System.out.println("Product Result: " + product_name);
-        }
-
-        Assert.assertTrue(check_result);*/
-
         //results = items found on page
         List<WebElement> results = driver.findElements(By.xpath("//*[@class='inventory_item_name']"));
         System.out.println("Items found: " + results.size());
@@ -70,9 +53,6 @@ public class products {
         Thread.sleep(5000);
 
     }
-
-
-
 
 
     @After
